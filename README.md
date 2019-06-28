@@ -70,7 +70,7 @@ If you'd like an alternative on Windows that supports functionality similar to `
 Han Boetes and @nickthename have contributed a simple shell-script alternative for those not interested in installing a RubyGem:
 
 ``` bash
-haste() { a=$(cat); curl -X POST -s -d "$a" https://hastebin.com/documents | awk -F '"' '{print "https://hastebin.com/"$4}'; }
+haste() { curl -X POST -s -d "@-" https://hastebin.com/documents | awk -F '"' '{print "https://hastebin.com/"$4}'; }
 ```
 
 Usage:
